@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "HotReloadNotifications",
+	"Description": "hook hotreload events",
+	"Category": "Other",
+	"CreatedBy": "ekuinox",
+	"CreatedByURL": "https://github.com/ekuinox",
+	"DocsURL": "",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "HotReloadNotifications",
+			"Type": "Editor",
+			"LoadingPhase": "Default"
+		}
+	]
+}
