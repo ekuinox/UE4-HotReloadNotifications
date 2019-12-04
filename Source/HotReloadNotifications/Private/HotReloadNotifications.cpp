@@ -2,7 +2,7 @@
 
 #include "HotReloadNotifications.h"
 #include "HttpModule.h"
-#include "Developer/HotReload/Public/IHotReload.h"
+#include "Misc/HotReloadInterface.h"
 #include "Interfaces/IHttpRequest.h"
 #include "Serialization/JsonSerializerMacros.h"
 
@@ -59,7 +59,7 @@ void FHotReloadNotificationsModule::OnCompileFinished(const FString& LogDump, EC
 		return ToString[Index];
 	};
 
-	const auto Body = FDiscordWebhookRequestBody(FString(L"[HotReloadNotifications] Compile Finished with ") + CompilationResultToString(CompilationResult));
+	const auto Body = FDiscordWebhookRequestBody(FString(L"UE4からの通知 ") + (CompilationResult == ECompilationResult::Succeeded ? L"コンパイル成功!" : L"コンパイル失敗..."));
 
 	auto Request = FHttpModule::Get().CreateRequest();
 
